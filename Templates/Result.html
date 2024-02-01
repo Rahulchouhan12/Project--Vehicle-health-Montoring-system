@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Result Page</title>
+	<style type="text/css">
+		body{
+			margin-top: 0px;
+			margin-left:10%;
+			margin-right: 10%;
+			align-items: center;
+		}
+
+		.container{
+			font-family: Segoe UI Historic;
+		}
+		/*--------------------------------------header--------------------------- */ 
+		.logo{
+			color:blue;
+			text-shadow: 0px 2px 1px gray;
+			float: left;
+			font-size: 0.6cm;
+			font-weight: bold;
+		}
+		
+		.navbar{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+		}
+		.header nav ul{
+			list-style: none;
+			display: flex;
+			align-items: center;
+		}
+		.header nav ul li{
+			padding-left: 10px;
+			cursor: pointer;
+		}
+
+		.header nav ul li:hover{
+			font-weight: bold;
+		}
+		.header nav ul  a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.btn-sign-in{
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: #2c7de6;;
+			color: white;
+			box-shadow: 1px 1px 5px 5px;
+		}
+
+		.btn-sign-in:hover{
+			color:#2c7de6;
+			background: white;
+		}
+
+		.title{
+			color: #2c7de6;;
+			text-shadow: 0px 2px 1px gray;
+			font-size: 1cm;
+			font-weight: bold;
+			margin: 20px;
+		}
+		/*-------------------------------Main content ----------------------------*/
+		
+		.add-entry-form{
+			border: 1px solid blue;
+			display: flex;
+			height: 400px;
+			
+			margin-left: 20%;
+			margin-right: 20%;
+			margin-top: 3%;
+			margin-bottom: 3%;
+			justify-content: center;
+		}
+
+		.btns{
+			display: flex;
+			justify-content: space-around;
+		}
+		table{
+			height: 300px;
+		}
+		.status{
+			font-size: 1cm;
+			font-weight: bold;
+			color: blue;
+			text-shadow: 1px 1px 2px red;
+
+		}
+
+		.content{
+			font-size: 0.5cm;
+			color: black;
+			text-shadow: none;
+			margin-top: 30px;
+		}
+
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+	<!----------------------------------------------------------- Header ------------------------------------------>
+	<header class="header">
+		<nav class="navbar">
+		<div class="logo">Vehicle Health Monitoring</div>
+		
+			<ul>
+				<li><a href="/Home/">Home</a></li>
+				<li>About US</li>
+				<li>Services</li>
+				<li>Contact Us</li>
+				<li><a href="/Home/"><button class="btn-sign-in">Sign Out </button></a></li>
+			</ul>
+		</nav>
+		<hr>
+	</header>
+	<!----------------------------------------------------------- BODY------------------------------------------>
+	<main>
+		<div class="title" align="center"> Reciept</div>
+		<div class="add-entry-form">
+		<div class="status">
+			Data Saved Successfully
+
+			<div class="content">
+
+			<table>
+				<tr> <td>Engine Oil Health:- </td><td > {{engine_oil}}</td></tr>
+				<tr> <td>Pollution:- </td><td> {{Pollution}}</td></tr>
+				<tr> <td>Tyres :-</td><td> {{tyre}}</td></tr>
+				<tr> <td>Brake :-</td><td> {{brake}}</td></tr>
+				<tr> <td>Physical:-</td><td> {{physical}}</td></tr>
+				<tr> <td>Next Servicing Date:-</td><td> {{NewDate}}</td></tr>
+
+			</table>
+		</div>
+		</div>
+		
+
+		</div>
+		<hr >
+		<div class="btns">
+			<a href="/Sign_in/All_Entry/vid={{vid}}"><button class="btn-sign-in">View all</button></a>
+			<a href="/Sign_in/Add_Entry/vid={{vid}}"><button class="btn-sign-in">Add more</button></a>
+		</div>
+
+	</main>
+	<!----------------------------------------------------------- Footer------------------------------------------>
+	<footer>
+		<p><center>
+			 This Site is Designed and Maintained By<br> Rahul, Yashraj, Arjav <br>© 2023 SVIIT Indore, India  
+		</center></p>
+
+	</footer>
+    </div>
+</body>
+</html>

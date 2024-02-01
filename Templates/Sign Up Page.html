@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Sign Up Page</title>
+	<style type="text/css">
+		body{
+			margin-top: 0px;
+			margin-left:10%;
+			margin-right: 10%;
+			align-items: center;
+		}
+
+		.container{
+			font-family: Segoe UI Historic;
+		}
+		/*--------------------------------------header--------------------------- */ 
+		.logo{
+			color:blue;
+			text-shadow: 0px 2px 1px gray;
+			float: left;
+			font-size: 0.6cm;
+			font-weight: bold;
+		}
+		
+		.navbar{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+		}
+		.header nav ul{
+			list-style: none;
+			display: flex;
+			align-items: center;
+		}
+		.header nav ul li{
+			padding-left: 10px;
+			cursor: pointer;
+		}
+
+		.header nav ul li:hover{
+			font-weight: bold;
+		}
+
+		.header nav ul  a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.btn-sign-in{
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: #2c7de6;;
+			color: white;
+			box-shadow: 1px 1px 5px 5px;
+		}
+
+
+		.btn-sign-in:hover{
+			color:#2c7de6;
+			background: white;
+			
+		}
+
+		.title{
+			color: #2c7de6;;
+			text-shadow: 0px 2px 1px gray;
+			font-size: 1cm;
+			font-weight: bold;
+		}
+		/*-------------------------------Main content ----------------------------*/
+		
+        .main-container{
+        	display: flex;
+        	margin: 16%;
+        	margin-top: 2%;
+        	margin-bottom: 5%;
+        	justify-content: center;
+        	/*box-shadow:0px 0px 10px 1px ;
+        	border-radius: 5px;*/
+        	border: 1px solid blue;
+        }
+		.Sign-in-box{
+			margin: 3%;
+			height: 400px;
+			width:400px;
+			font-weight: bold;
+		}
+		.Sign-in-box-img{
+			height: 400px;
+			width: 400px;
+		}
+
+		.input-text{
+			height:30px;
+			width: 80%;
+		}
+
+		.btn-size{
+			height:40px;
+			width: 200px;
+			margin: 50px;
+			margin-bottom: 10px;
+		}
+		.signup-link:hover{
+			color: #2c7de6;
+			text-shadow: 0px 2px 1px gray;
+			font-size: 0.65cm;
+		}
+
+		.psw-msg {
+			font-size: 0.4cm;
+			color: red;
+			text-shadow: 0px 0px 1px blue;
+
+		}
+
+		.save-mag{
+			font-size: 0.4cm;
+			color: blue;
+			text-shadow: 0px 0px 2px red;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+	<!----------------------------------------------------------- Header ------------------------------------------>
+	<header class="header">
+		<nav class="navbar">
+		<div class="logo">Vehicle Health Monitoring</div>
+		
+			<ul>
+				<li><a href="/Home/">Home</a></li>
+				<li>About US</li>
+				<li>Services</li>
+				<li>Contact Us</li>
+				<li><a href="/Sign_in/"><button class="btn-sign-in">Sign In </button></a></li>
+			</ul>
+		</nav>
+		<hr>
+	</header>
+	<!----------------------------------------------------------- BODY------------------------------------------>
+	<main>
+		<div class="title" align="center">Sign Up</div><br>
+		<div class="main-container">
+			
+			<div class="Sign-in-box">
+				<form action="/Sign_up/" method="POST">
+					{%csrf_token%}
+					<label for="Username">Username:-</label>
+					<input type="text" name="Username" placeholder="Enter Username" class="input-text" required>
+					<br><br>
+					<label for="email">Email:-</label><br>
+					<input type="email" name="email" placeholder="Enter  Email" class="input-text" required>
+					<br><br>
+					<label for="passwd">Password:-</label>
+					<input type="password" name="passwd" placeholder="Enter Password"  class="input-text" required>
+					<br><br>
+					<label for="passwd2">Confirm Password:-</label>
+					<input type="password" name="passwd2" placeholder="Confirm Password"  class="input-text" required>
+
+					<input type="submit" value="Create Account" class="btn-sign-in btn-size">
+				</form>
+				<div class="psw-msg">{{passwdmsg}}</div>
+				<div class="save-mag">{{savemsg}}</div>
+				<br><hr>
+				<a href="/Sign_in/" class="logo signup-link">i already have a Account </a>
+			</div> 
+			<div class="Sign-in-box-img">
+				<img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp" class="Sign-in-box-img" >
+			</div>
+		</div>
+		<hr >
+	</main>
+	<!----------------------------------------------------------- Footer------------------------------------------>
+	<footer>
+		<p><center>
+			 This Site is Designed and Maintained By<br> Rahul, Yashraj, Arjav <br>© 2023 SVIIT Indore, India  
+		</center></p>
+
+	</footer>
+    </div>
+</body>
+</html>

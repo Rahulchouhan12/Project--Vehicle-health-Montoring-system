@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Landing Page</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;1,100;1,300&display=swap" rel="stylesheet">
+	<style type="text/css">
+		body{
+			margin: 0px;
+		}
+		#Background{
+			height: 100%;
+			width: 100%;
+			position: fixed;
+			opacity: 25%;
+			z-index: -1;
+		}
+
+		.container{
+			font-family: Segoe UI Historic;
+			margin-top: 0px;
+			margin-left:10%;
+			margin-right: 10%;
+			align-items: center;
+		}
+		/*--------------------------------------header--------------------------- */ 
+		.logo{
+			color:blue;
+			text-shadow: 0px 2px 1px gray;
+			float: left;
+			font-size: 0.6cm;
+			font-weight: bold;
+		}
+		
+		.navbar{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			position: sticky;
+		}
+		.header nav ul{
+			list-style: none;
+			display: flex;
+			align-items: center;
+		}
+		.header nav ul li{
+			padding-left: 10px;
+			cursor: pointer;
+		}
+		.header nav ul li a{
+			text-decoration: none;
+			color: black;
+		}
+
+		.header nav ul li:hover{
+			font-weight: bold;
+		}
+		.btn-sign-in{
+			padding: 10px;
+			border-radius: 10px;
+			border: none;
+			background-color: #2c7de6;;
+			color: white;
+			box-shadow: 1px 1px 5px 5px;
+		}
+
+		.btn-sign-in:hover{
+			color:#2c7de6;;
+			background: white;
+			
+		}
+		
+		/*-------------------------------Main content ----------------------------*/
+
+		.section1{
+			display: flex;
+		}
+
+		.main-top-left{
+			float: left;
+			max-width: 60%;
+		}
+
+
+		.title{
+			color: #2c7de6;;
+			text-shadow: 0px 2px 1px gray;
+			font-size: 1cm;
+			font-weight: bold;
+		}
+
+		.intro{
+			font-size: .5cm;
+			font-family: 'Poppins', sans-serif;
+			text-align: justify;
+		}
+
+		.main-top-right{
+			float: left;
+		    max-width: 40%;
+		    min-height: 40%;
+		    transition: 1s;
+		    margin-top: 5%;
+		    margin-left: 5%;
+		}
+
+		.main-top-right img{
+			height: 350px;
+			width: 350px;
+			justify-content: center;
+			border-radius: 50%;
+			box-shadow: 0px 0px 10px 1px blue;
+			float: right;
+			transition: 0.8s;
+		}
+
+		.main-top-right img:hover{
+			box-shadow: 0px 0px 10px 10px #2c7de6;;
+		}
+ 
+
+		.Images{
+			display: flex;
+			margin-top: 50px;
+			margin-bottom: 50px;
+			justify-content: space-around;
+		}
+
+		.Images img{
+			height:250px ;
+			width: 250px;
+			border-radius: 50%;
+			box-shadow: 0px 0px 8px 1px blue;
+			transition: 0.5s;
+		}
+
+		.Images img:hover{
+			height:270px ;
+			width: 270px;
+			box-shadow: 0px 0px 10px 5px #2c7de6;;
+		}
+
+	</style>
+</head>
+<body>
+<img id="Background" src="0https://tsico.com/wp-content/uploads/2019/04/healthcare-background-1.jpg">
+	<div class="container">
+	<!----------------------------------------------------------- Header ------------------------------------------>
+	<header class="header">
+		<nav class="navbar">
+		<div class="logo">Vehicle Health Monitoring</div>
+		
+			<ul>
+				<li><a href="/Home/">Home</a></li>
+				<li>About US</li>
+				<li>Services</li>
+				<li>Contact Us</li>
+				<li><a href="/Sign_in/"><button class="btn-sign-in">Sign In </button></a></li>
+			</ul>
+		</nav>
+		<hr>
+	</header>
+	<!----------------------------------------------------------- BODY------------------------------------------>
+	<main>
+		<section class="section1">
+			<div class="main-top-left">
+				<div class="title">Make your vehicles healthy...</div>
+				<p class="intro">
+				Many of today’s vehicles include a wide range of components that perform various operations while vehicle is in use. Overtime with the usage of the vehicle, it may cause failure of the components which affects the overall performance of the vehicle. This may also cause our vehicle to use more fuel/ emit more pollution. <br><br>
+				The domain of our proposed work is “health monitoring of vehicles”. This is usually done by 
+				Our software will help reduce air pollution by determining the right servicing required. So the vehicle emits as less smoke and pollutants as possible. <br><Br>
+				Our Project Vehicle Health Monitoring System basically would help determine the health of a particular vehicle in order to figure out if it needs more servicing, more oiling etc for it to work optimally and cause less air pollution as much as possible.
+
+			    </p>
+            <a href="/Sign_up/">
+			<button class="btn-sign-in">
+				Get Started 
+			</button></a>
+		    </div>
+
+		    <div class="main-top-right">
+		    <img src="https://images.netdirector.co.uk/gforces-auto/image/upload/w_412,h_309,q_auto:best,c_fill,f_auto,fl_lossy/auto-client/ca0b205cc4a38fbd46140ece05f50664/depositphotos_163507042_xl_2015small.jpg">	
+		    </div>
+
+		</section>
+		<hr>
+		<section>
+			<div>
+			<div class="title" align=center>Unhealthy Vehicles...</div>
+			<div class="Images">
+				<img src="https://media.istockphoto.com/id/174654414/photo/vehicle-on-fire-with-black-smoke-billowing-around-it.jpg?s=612x612&w=0&k=20&c=jAlaoq5_fxr4HJkPqPZbyI0VxBopqjXK-ljaIy0yRvk=">
+				<img src="https://www.hsph.harvard.edu/news/wp-content/uploads/sites/21/2021/12/Vehicle-exhaust_1200x800.jpg">
+				<img src="https://media.istockphoto.com/id/644545616/photo/police-department-tow-truck-delivers-the-damaged-vehicle.jpg?s=612x612&w=0&k=20&c=k5oBtX2Z3LynDsa8mp5LjLYIHfTm47r21Z35t2LNAr0=">
+			</div>
+			</div>
+
+		</section>
+		<hr >
+	</main>
+	<!----------------------------------------------------------- Footer------------------------------------------>
+	<footer>
+		<p><center>
+			 This Site is Designed and Maintained By<br> Rahul, Yashraj, Arjav <br>© 2023 SVIIT Indore, India  
+		</center></p>
+
+	</footer>
+    </div>
+</body>
+</html>
